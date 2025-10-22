@@ -1,0 +1,29 @@
+.your-ticket-wrapper{
+    padding: 80px 160px;
+}
+
+.your-ticket-wrapper .ticket-text{
+    color: #ff4b2b;
+    font-weight: 500;
+    padding: 20px 0;
+}
+.your-ticket-wrapper h2{
+    padding: 4px 0 20px 0;
+    text-align: center;
+}
+.your-ticket-wrapper .ticketing{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.your-ticket-wrapper .ticketing .download{
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff4b2b;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s 
+ease;
+}

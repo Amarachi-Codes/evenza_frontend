@@ -1,0 +1,21 @@
+.card-content-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bookButton{
+     padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #666;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #007bff;
+  margin: 0px 18px 48px 18px;
+}
+
+.css-53g0n7-MuiButtonBase-root-MuiIconButton-root { 
+     background-color: secondary;
+}

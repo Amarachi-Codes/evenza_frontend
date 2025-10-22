@@ -1,0 +1,206 @@
+a{
+    text-decoration: none;
+}
+
+.btn{
+    color: white;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.btn:disabled{
+    cursor: wait;
+}
+
+.primary{
+    background-color: #ff4b2b;
+}
+
+.green:hover{
+    background-image: linear-gradient(to right, #009C3C, #008626);
+}
+
+
+
+.grey{
+    background-color: #b4b6b6;
+    color: #000;
+}
+.grey2{
+    background-color: #4B4B4B;
+    color: #B0B0B0;
+}
+.white{
+    background-color: white;
+    border: 1px solid #00A542;
+    color: black;
+}
+
+
+.mini{
+    border-radius: 5px;
+    width: 59px;
+    height: 38px;
+}
+
+
+.mini2{
+    border-radius: 6px;
+    width: 82px;
+    height: 32px;
+}
+
+
+.small{
+    border-radius: 5px;
+    width: 124px;
+    height: 38px;
+}
+
+
+.small2{
+    border-radius: 6px;
+    width: 143px;
+    height: 56px;
+}
+
+
+.normal{
+    border-radius: 5px;
+    width: 216px;
+    height: 58px;
+    margin-top: 10px;
+    
+}
+
+/* For Login, Continue, Finish */
+.normal2{
+    border-radius: 6px;
+    width: 399px;
+    height: 42px;
+}
+
+
+.large{
+    border-radius: 5px;
+    width: 479px;
+    height: 38px;
+}
+
+
+.large2{
+    border-radius: 5px;
+    width: 93%;
+    height: 38px;
+}
+.large3{
+    border-radius: 5px;
+    height: 38px; 
+    width: 35vw;
+}
+.large4{
+    width: 35vw;
+    height: 38px; 
+    border-radius: 5px;
+}
+.large5{
+    width: 35vw;
+    height: 38px; 
+    border-radius: 5px;
+}
+@media screen and (max-width: 280px){
+    .mini{
+        width: 200px;
+        
+    }
+    .large3{
+       width: 90vw; 
+    }
+    .large{
+        width: 90vw;
+}
+}
+
+
+
+@media only screen and (min-width:281px) and (max-width: 390px){
+    .mini{
+        width: 300px;
+        
+    }
+    .large3{
+       width: 93vw; 
+    }
+    .large5{
+        width: 43.2vw;
+    }
+    .large4{
+        width: 45vw;
+    }
+    .large{
+        width: 90vw;
+}
+}
+
+@media only screen and (min-width:391px) and (max-width: 800px){
+    .large3{
+        width: 93vw; 
+     }
+     .large4{
+        width: 45vw;
+     }
+     .large5{
+        width: 44vw;
+    }
+    .large{
+        width: 90vw;
+}
+}
+@media only screen and (min-width:768px) and (max-width: 912px){
+    .large3{
+        width: 90vw; 
+     }
+     .large4{
+        width: 44vw;
+    }
+    
+}
+@media screen and (width: 820px) {
+    .large5{
+        width: 28.5vw;
+    }
+}
+@media screen and (width: 853px){
+    .large5{
+        width: 27vw !important;
+    }
+}
+
+@media screen and (width: 912px){
+    .large5{
+        width: 25.5vw;
+    }
+}
+
+@media only screen and (min-width:391px) and (max-width: 912px){
+    .mini{
+        width: 340px;
+        
+    }
+    
+}
+
+
+
+
+
+@media screen and (max-width:540px) {
+    .normal2{
+        width: 90vw;
+}
+}

@@ -1,0 +1,22 @@
+import CreateEventForm from "../../components/CreateEventForm/CreateEventForm";
+import Footer from "../../components/Footer/Footer";
+import Navbar from "../../components/Navbar/Navbar";
+import "./CreateEvent.css"
+
+
+const CreateEvent = () => {
+  return (
+    <>
+     <div className="form-wrapper">
+     <Navbar/> 
+    
+     <CreateEventForm/>
+     
+     <Footer/>
+     </div>
+     
+    </>
+  )
+}
+
+export default CreateEvent

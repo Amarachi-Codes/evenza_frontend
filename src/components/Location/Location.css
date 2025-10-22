@@ -1,0 +1,38 @@
+
+/* Label text color */
+.Input-label.MuiInputLabel-root {
+  color: #fff !important; /* default label color */
+  font-weight: 500;
+}
+
+/* When focused (label moves up and highlights) */
+.Input-label.Mui-focused {
+  color: #ff4b2b !important; /* your theme orange */
+}
+
+/* Input text color */
+.MuiSelect-select {
+  color: #fff !important;
+}
+
+/* Dropdown arrow icon color */
+.MuiSvgIcon-root {
+  color: #fff !important;
+}
+
+/* Underline (standard variant) */
+.MuiInput-underline:before {
+  border-bottom: 1px solid #fff !important;
+}
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 1px solid #ff4b2b !important;
+}
+.MuiInput-underline:after {
+  border-bottom: 2px solid #ff4b2b !important;
+}
+
+/* Menu background and text */
+.MuiPaper-root.MuiMenu-paper {
+  background-color: #fff5f4 !important;
+  color: #333 !important;
+}

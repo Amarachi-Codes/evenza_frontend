@@ -1,0 +1,16 @@
+.categoriesContainer{
+  width: 100%;
+  padding: 4rem 2rem;
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+} 
+
+.title{
+    text-align: center;
+    background-color: black;
+    color: #ff4b2b;
+    padding-top: 54px;
+}

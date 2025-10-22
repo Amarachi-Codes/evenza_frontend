@@ -1,0 +1,147 @@
+/* Main container */
+.special-offer {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+/* Image background */
+.offer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+/* Overlay text content */
+.offer-content {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 40%;
+  text-align: right;
+  z-index: 2;
+}
+
+
+.special-offer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+  z-index: 1;
+}
+
+/* Headings */
+.offer-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff4b2b;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.offer-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.offer-heading h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.discount-btn {
+  background-color: #ff4b2b;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.discount-btn:hover {
+  background-color: #e03b1e;
+}
+
+/* Text paragraph */
+.offer-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f5f5f5;
+  margin-bottom: 2rem;
+}
+
+/* Buttons section */
+.offer-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.primary-btn {
+  background-color: #ff4b2b;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #e03b1e;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #ff4b2b;
+  border: 2px solid #ff4b2b;
+  border-radius: 30px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background-color: #ff4b2b;
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .offer-content {
+    max-width: 90%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+  }
+
+  .offer-heading {
+    justify-content: center;
+  }
+
+  .offer-buttons {
+    justify-content: center;
+  }
+}
+
+
+
+

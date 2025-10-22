@@ -1,0 +1,160 @@
+.nav{
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #FFF;
+    justify-content: space-between;
+    padding: 24px 28px;
+    position: sticky;
+    top: 0;
+    z-index: 999
+  }
+  .nav .logoWrapper{
+    text-decoration: none;
+  }
+  .nav .logoWrapper .logo{
+    color: #FFF;
+    font-size: 24px;
+  }
+  .nav .logoWrapper .logo a{
+color: #FFF;
+
+  }
+  .nav .logoWrapper .logo a:hover{
+    color: #ff4b2b;
+  }
+  
+  .nav .navCenter{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav .navCenter .inputWrapper{
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
+    border: 1px solid #FFF;
+    
+    
+  }
+  .nav .navCenter .inputWrapper input{
+    width: 30vw;
+    padding: 8px 4px;
+    border-radius: 10px;
+    outline: none;
+    border: #fff;
+  }
+  .nav .navCenter button{
+    padding: 8px 18px;
+    border-radius: 10px;
+    border: #ff4b2b;
+    background-color: #ff4b2b; 
+    color: #fff;
+    margin-left: 8px;
+  }
+  .nav .navRight ul{
+    display: flex;
+    gap: 20px;
+  
+  }
+  .nav .navRight ul a{
+    text-decoration: none;
+    color: #FFF;
+  }
+  
+  .nav .navRight ul a:hover{
+    color: #ff4b2b;
+  }
+  .displaynav {
+    display: none;
+    
+  }
+  
+  @media screen and (max-width:390px){ 
+  .hamburger {
+    width: 70vw;
+    background-color: #FFF;
+    z-index: 10;
+    height: 85vh;
+    margin-top: 4.3rem;
+    position: absolute;
+    left: 30%;
+    top: 10%;
+  
+  }
+  
+  .hamburger ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4.5rem;
+    gap: 48px;
+    list-style: none;
+  
+  }
+  
+  .hamburger ul li a:hover {
+    color: #ff4b2b;
+  }
+  
+  .hamburger ul li a {
+    text-decoration: none;
+    color: #fff;
+  
+  
+  }
+  .displaynav {
+    display: block;
+  }
+  }
+  @media screen and (min-width:391px)and (max-width:767px) {
+    .hamburger {
+      width: 70vw;
+      background-color: #000;
+      z-index: 10;
+      height: 85vh;
+      margin-top: 4.3rem;
+      position: absolute;
+      left: 30%;
+      top: 10%;
+  
+  }
+  
+  .hamburger ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 4.5rem;
+      gap: 48px;
+      list-style: none;
+  
+  }
+  
+  .hamburger ul li a:hover {
+      color: #ff4b2b;
+  }
+  
+  .hamburger ul li a {
+      text-decoration: none;
+      color: #fff;
+  
+  
+  }
+  .displaynav {
+    display: block;
+  }
+  
+  }
+  @media screen and (max-width:910px) {
+    .nav .navCenter{
+      display: none;
+    }
+    .nav .navRight ul{
+      display: none;
+    }
+    .hamburger{
+      display: block;
+    }
+    }
