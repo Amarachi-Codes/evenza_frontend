@@ -1,73 +1,125 @@
-# React + TypeScript + Vite
+# evenza_frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+🖥️ Frontend
 
-Currently, two official plugins are available:
+Event list page — displays all events (GET /events)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Add event form — create new events (POST /events)
 
-## React Compiler
+Book event form — book an existing event (POST /bookings)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Bookings page — view all bookings (GET /bookings)
 
-## Expanding the ESLint configuration
+⚙️ Backend
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Built with Express + TypeScript
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+PostgreSQL database with the following models:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Event: id, title, description, date, location
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Booking: id, userName, eventId
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+REST API endpoints:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+POST /events → Create an event
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+GET /events → List all events
+
+POST /bookings → Book an event
+
+GET /bookings → List all bookings
+
+💡Note
+
+Validation (e.g., event date cannot be in the past)
+
+Prevent duplicate bookings by the same user
+
+Basic UI styling with Material UI or Tailwind CSS
+
+🧱 Requirements
+
+Make sure you have the following installed:
+
+Node.js ≥ 18
+
+PostgreSQL
+
+npm or yarn
+
+⚙️ Backend Setup
+1. Clone the repository
+git clone https://github.com/Amarachi-Codes/evenza_frontend.git
+cd <evenza>/backend
+
+2. Install dependencies
+npm install
+
+3. Create a .env file
+
+Inside the backend folder, create a file named .env and add your database connection:
+
+DATABASE_URL="postgresql://${DATABASE_USER_DEV}:${DATABASE_PASS_DEV}@${DATABASE_HOST_DEV}:${DATABASE_PORT_DEV}/${DATABASE_NAME_DEV}?schema=public"
+
+PORT = 3010
+
+4. Run database migrations (if using Prisma or TypeORM)
+npx prisma migrate dev
+
+
+or
+
+npm run migrate
+
+5. Start the backend server
+npm run dev
+
+
+The API should now be running on http://localhost:3010
+
+🖥️ Frontend Setup
+1. Move into the frontend folder
+cd ..evenza
+
+2. Install dependencies
+npm install
+
+3. Configure API URL
+
+In your .env file (inside frontend), set:
+
+VITE_API_URL=http://localhost:3010
+
+4. Start the frontend app
+npm run dev
+
+
+Frontend should now run on http://localhost:5173
+ (or a similar port)
+
+🔗 API Quick Test
+
+You can test endpoints using Postman or cURL:
+
+# Create an event
+curl -X POST http://localhost:3010/events -H "Content-Type: application/json" \
+-d '{"title":"Tech Conference","description":"AI Meetup","date":"2025-12-01","location":"Lagos"}'
+
+🧪 Project Structure
+
+Clean folder structure
+
+Proper TypeScript usage (types/interfaces)
+
+Working CRUD endpoints
+
+Functional frontend consuming the backend API
+
+Basic error handling
+
+📜 License
+
+This project is open-source and free to use under the MIT License
+.
