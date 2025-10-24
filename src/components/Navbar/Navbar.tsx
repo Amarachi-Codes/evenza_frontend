@@ -57,7 +57,7 @@ const Navbar = () => {
                      
                      <li><NavLink to={"/login"}>Login</NavLink></li>
                     <li><NavLink to={"/signup"}>Signup</NavLink></li>
-                     <li><NavLink to={"/Booking List"}>Booking List</NavLink></li>
+                     <li><NavLink to={"/bookinglist"}>Booking List</NavLink></li>
                  </ul>
              </div>   
                 )}
